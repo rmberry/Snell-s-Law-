@@ -49,3 +49,4 @@ int main(int argc, char **argv) {
      printf("Your input that you provided doesn't fit into the valid range of the arcsine function\n");
 
      } 
+}
