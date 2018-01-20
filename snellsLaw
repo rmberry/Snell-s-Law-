@@ -13,6 +13,7 @@ int main(int argc, char **argv) {
 
   //theta1rad is the user's input angle converted into radians
   double theta1, theta2, theta1rad, index2;
+  //n1 is a placeholder for if the starting environment were different than air
   int n1 = 1;
 
   //the constant pi from mathematics
