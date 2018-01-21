@@ -8,7 +8,7 @@
  14   //theta1rad is the user's input angle converted into radians
  15   double theta1, theta2, theta1rad, index2;
  16 
- 17   //n1 is a placeholer for in the starting environment was different than air
+ 17   //n1 is a placeholder for if the starting environment was different than air
  18   int n1 = 1;
  19 
  20   //the constant pi from mathematics
