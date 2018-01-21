@@ -1,43 +1,48 @@
-  7   * reference to Snell's Law 
-  8   * https://en.wikipedia.org/wiki/Snell%27s_law
-  9   */
- 10 
- 11 int main(int argc, char **argv) {
- 12 
- 13 
- 14   //theta1rad is the user's input angle converted into radians
- 15   double theta1, theta2, theta1rad, index2;
- 16 
- 17   //n1 is a placeholder for if the starting environment was different than air
- 18   int n1 = 1;
- 19 
- 20   //the constant pi from mathematics
- 21   const pi = 3.14159265;
- 22 
- 23   theta1 = atof(argv[1]);
- 24   /*need to convert user's input in degrees to radians so
- 25   * the math library can use it
- 26   */
- 27   theta1rad = theta1 * (pi / 180.0);
- 28   index2 = atof(argv[2]);
- 29 
- 30   //making sure not to have an extreme index
- 31   if(index2 < 1) {
- 32     printf("Though theoretically possible, we don't accept indexes <1\n");
- 33     }
- 34 
- 35        //check to make sure the information falls into the valid range of angles
- 36        else if( (theta1 > -180) && (theta1 <180) ) {                                                        
- 37          theta2 = asin( ( (n1 * sin(theta1rad) ) / index2 ) ) * (180.0 / pi);
- 38          printf("The refractive index calculated is: %lf\n", theta2);
- 39          }
- 40               
- 41             else {
- 42               printf("You didn't input a valid refractive angle\n");
- 43   
- 44               }
- 45               
- 46               
- 47   return 0;   
- 48 } 
- 49 
+   #include<stdlib.h>
+   #include<stdio.h>
+   #include<math.h>
+   
+   /** This program will evaluate the angle of refraction
+     * using Snell's Law
+     * reference to Snell's Law 
+     * https://en.wikipedia.org/wiki/Snell%27s_law
+     */
+  
+  int main(int argc, char **argv) {
+  
+  
+    //theta1rad is the user's input angle converted into radians
+    double theta1, theta2, theta1rad, index2;
+  
+    //n1 is a placeholer for in the starting environment was different than air
+    int n1 = 1;
+  
+    //the constant pi from mathematics
+    const pi = 3.14159265;
+  
+    theta1 = atof(argv[1]);
+    /*need to convert user's input in degrees to radians so
+    * the math library can use it
+  */
+   theta1rad = theta1 * (pi / 180.0);
+    index2 = atof(argv[2]);
+ 
+ //making sure not to have an extreme index
+    if(index2 < 1) {
+      printf("Though theoretically possible, we don't accept indexes <1\n");
+      }
+  
+         //check to make sure the information falls into the valid range of angles
+         else if( (theta1 > -180) && (theta1 <180) ) {                                                        
+           theta2 = asin( ( (n1 * sin(theta1rad) ) / index2 ) ) * (180.0 / pi);
+           printf("The refractive index calculated is: %lf\n", theta2);
+           }
+                
+              else {
+                printf("You didn't input a valid refractive angle\n");
+    
+                }
+                
+                
+    return 0;   
+  } 
